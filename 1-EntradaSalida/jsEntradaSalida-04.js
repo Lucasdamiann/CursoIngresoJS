@@ -4,6 +4,11 @@ y lo muestro por 'ID' al presionar el botón 'mostrar'
 */
 function mostrar()
 {
-	alert("ok");
+	var vDato;//defino veriable
+	
+	vDato = prompt("Ingrese Dato");//asigno variable
+	document.getElementById("txtIdNombre").value = vDato;
+
+	
 }
 
