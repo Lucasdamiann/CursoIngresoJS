@@ -9,5 +9,5 @@ function mostrarAumento()
 	
 	importe=parseInt(document.getElementById("txtIdSueldo").value);
 	
-	document.getElementById("txtIdResultado").value = importe+importe*0.1;
+	document.getElementById("txtIdResultado").value = importe +  importe*0.1;
 }
