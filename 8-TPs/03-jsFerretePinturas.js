@@ -8,7 +8,7 @@ function FahrenheitCentigrados ()
     let cent;
 
     fahr=parseInt(txtIdTemperatura.value);
-    cent=(fahr-32)*5/9
+    cent=((fahr-32)*5/9).toFixed(2);
     alert(fahr +"° Fahrenheit son " + cent + "° Celsius.")
 
 }
