@@ -10,20 +10,53 @@ hasta que el usuario quiera, mostrar:
 7-Promedio de positivos.
 8-Promedios de negativos.
 9-Diferencia entre positivos y negativos, (positvos-negativos). */
-function mostrar()
-{
-	//declarar contadores y variables 
-	var respuesta;
-	var numeroIngresado;
-	var sumaNegativos=0;
+function mostrar() {
+	let respuesta = "si";
+	let sumaNeg = 0;
+	let sumaPos = 0
+	let numero = 0;
+	let i = 0;
+	let j = 0;
+	let k = 0;
+	let l = 0;
+	let prompos = 0;
+	let promneg = 0;
+	let diferencia;
 
-	respuesta="si";
+	while (respuesta == "si") {
+		numero = parseInt(prompt("Ingresa un numero"));
 
-	while(respuesta=="si")
-	{
-		
-		respuesta=prompt("desea continuar?");
-	}//fin del while
+		if (numero < 0) {
+			sumaNeg += numero;
+			i++;//cont neg
+			promneg = sumaNeg / i;
+		}
+		else if (numero > 0) {
+			sumaPos += numero;
+			j++;//con pos
+			prompos = sumaPos / j;
+		}
+		else if (numero == 0) {
+			k++;//cont cero
+		}
+		if (numero % 2 == 0) {
+			l++;//cont pares
+		}
+		respuesta = prompt("Seguis sumando numeros, si o no?")
 
-	document.write("la suma de negativos es :"+sumaNegativos);
+	}
+
+
+	diferencia = sumaPos - sumaNeg
+	document.write("La suma de los negativos es:" + sumaNeg + "<br>" +
+		"La suma  de los positivos es:" + sumaPos + "<br>" +
+		"La cantidad de positivos es:" + j + "<br>" +
+		"La cantidad de negativos es:" + i + "<br>" +
+		"La cantidad de ceros es:" + k + "<br>" +
+		"La cantidad de pares es:" + l + "<br>" +
+		"El promedio de positivos es:" + prompos + "<br>" +
+		"El promedio de negativos es:" + promneg + "<br>" +
+		"La diferencia entre positivos y negativos es:" + diferencia);
+
+
 }//FIN DE LA FUNCIÓN
